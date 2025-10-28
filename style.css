@@ -1,9 +1,9 @@
-* {
+  *{
     outline: 1px solid red;
 }
 
 @font-family { 
-
+    headFont: ;
 }
 
 
@@ -12,6 +12,7 @@ html, body {
     border: 0;
     height: 100vh;
     width: auto;
+    font-family: Arial ,Arial;
 }
 
 /*THE MAIN MAIN BOX CONFIG */
@@ -20,7 +21,7 @@ html, body {
     background-color: rgb(201, 199, 189);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 
 }
 
@@ -31,9 +32,65 @@ html, body {
 .topCont {
     grid-row: 1;
     grid-column: 1 / span 2;
-    
+    display: grid;
+    grid-template-columns: 600px 1fr;
 }
 
+
+/*TOP BOX CONTENT */
+
+.headerBox {
+    display: grid;
+    grid-template-rows: 15px 40px;
+    align-content: center;
+    align-items: center;
+}
+
+.topHead, #topCaption {
+    padding: 0;
+    margin: 0;
+    margin-left: 3px;
+    align-content: center;
+}
+
+.topHead {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#topCaption {
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+}
+
+.topBTNBox { 
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.CatalogBTNHead , .ProfileBTNHead , .SettingBTNHead {
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 12px;
+    box-shadow: 0px 3px 1px rgb(0, 0, 0, 0.2); 
+    font-family: Arial;
+    cursor: pointer;
+}
+
+.CatalogBTNHead:hover , .ProfileBTNHead:hover , .SettingBTNHead:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0, 0.2);
+}
+
+.CatalogBTNHead:active , .ProfileBTNHead:active , .SettingBTNHead:active {
+    transform: translateY(0.5px);
+}
 
 
 
