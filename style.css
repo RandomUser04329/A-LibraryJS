@@ -1,9 +1,10 @@
-  *{
+  * {
     outline: 1px solid red;
 }
 
-@font-family { 
-    headFont: ;
+@font-face { 
+    font-family: customFont1;
+    src: url("./customFonts/Comfortaa-Regular.ttf");
 }
 
 
@@ -12,15 +13,15 @@ html, body {
     border: 0;
     height: 100vh;
     width: auto;
-    font-family: Arial ,Arial;
+    font-family: customFont1 ,Arial;
 }
 
 /*THE MAIN MAIN BOX CONFIG */
 .mainMainBox {
     height: 100vh;
-    background-color: rgb(201, 199, 189);
+    background-color: rgb(230, 214, 171);
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 125px 1fr 1fr 80px;
     grid-template-columns: 1fr 2fr;
 
 }
@@ -30,10 +31,11 @@ html, body {
 
 /*TOP BOX CONFIG */
 .topCont {
+    background-color: rgb(214, 200, 161);
     grid-row: 1;
     grid-column: 1 / span 2;
     display: grid;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -41,15 +43,16 @@ html, body {
 
 .headerBox {
     display: grid;
-    grid-template-rows: 15px 40px;
+    grid-template-rows: 40px;
     align-content: center;
     align-items: center;
+    justify-content: start;
 }
 
 .topHead, #topCaption {
     padding: 0;
     margin: 0;
-    margin-left: 3px;
+    margin-left: 20px;
     align-content: center;
 }
 
@@ -64,32 +67,17 @@ html, body {
     color: rgb(255, 255, 255);
 }
 
-.topBTNBox { 
+.logoBox {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    gap: 20px;
 }
 
-.CatalogBTNHead , .ProfileBTNHead , .SettingBTNHead {
-    background-color: white;
-    border: 0;
-    border-radius: 20px;
-    height: 30px;
-    font-size: 12px;
-    box-shadow: 0px 3px 1px rgb(0, 0, 0, 0.2); 
-    font-family: Arial;
-    cursor: pointer;
-}
 
-.CatalogBTNHead:hover , .ProfileBTNHead:hover , .SettingBTNHead:hover {
-    background-color: rgb(255, 255, 255, 0.8);
-    color: rgb(0, 0, 0, 0.2);
-}
-
-.CatalogBTNHead:active , .ProfileBTNHead:active , .SettingBTNHead:active {
-    transform: translateY(0.5px);
+.libraryLogoHead {
+    width: 100px;
+    height: 100px;
+    filter: invert();
 }
 
 
@@ -106,10 +94,22 @@ html, body {
 
 
 /*CONTENT BOX CONFIG*/
-.mainCont {
+.LibraryCont {
     background-color: white;
     grid-row: 2 / span 2;
     grid-column: 2;
+    display: grid;
+    justify-content: center;
+    align-items: center
+
+}
+
+/*BOOK SHELF STYLING*/
+.bookShelf {
+    background-color: black;
+    border: 20px solid rgb(165, 112, 42);
+    width: 350px;
+    height: 600px;
 
 }
 
@@ -117,8 +117,9 @@ html, body {
 
 
 
-
 /*BOTTOM BOX CONFIG*/
 .bottomCont {
+    background-color: rgb(214, 200, 161);
     grid-row: 4;
+    grid-column: 1 / span 2;
 }
