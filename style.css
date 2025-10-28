@@ -14,13 +14,25 @@ html, body {
     width: auto;
 }
 
-/*TOP BOX CONFIG */
-.topCont {
+/*THE MAIN MAIN BOX CONFIG */
+.mainMainBox {
+    height: 100vh;
+    background-color: rgb(201, 199, 189);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
 }
 
 
 
+
+/*TOP BOX CONFIG */
+.topCont {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    
+}
 
 
 
@@ -28,10 +40,9 @@ html, body {
 
 /*SIDE BOX CONFIG*/
 .sideCont {
-
+    grid-row: 2 / span 2;
+    grid-column: 1;
 }
-
-
 
 
 
@@ -39,6 +50,9 @@ html, body {
 
 /*CONTENT BOX CONFIG*/
 .mainCont {
+    background-color: white;
+    grid-row: 2 / span 2;
+    grid-column: 2;
 
 }
 
@@ -49,5 +63,5 @@ html, body {
 
 /*BOTTOM BOX CONFIG*/
 .bottomCont {
-
+    grid-row: 4;
 }
