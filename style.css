@@ -22,7 +22,7 @@ html, body {
     background-color: rgb(230, 214, 171);
     display: grid;
     grid-template-rows: 125px 1fr 1fr 80px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(500px, 2fr);
 
 }
 
@@ -112,6 +112,16 @@ html, body {
     height: 600px;
 
 }
+
+.shelf1, .shelf2, .shelf3, .shelf4, .shelf5 {
+    width: auto;
+    height: 110px;
+    border-bottom: 10px solid rgb(165, 112, 42);
+}
+
+
+
+
 
 
 
