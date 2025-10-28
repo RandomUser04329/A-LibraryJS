@@ -1,0 +1,53 @@
+* {
+    outline: 1px solid red;
+}
+
+@font-family { 
+
+}
+
+
+html, body { 
+    margin: 0;
+    border: 0;
+    height: 100vh;
+    width: auto;
+}
+
+/*TOP BOX CONFIG */
+.topCont {
+
+}
+
+
+
+
+
+
+
+
+/*SIDE BOX CONFIG*/
+.sideCont {
+
+}
+
+
+
+
+
+
+
+/*CONTENT BOX CONFIG*/
+.mainCont {
+
+}
+
+
+
+
+
+
+/*BOTTOM BOX CONFIG*/
+.bottomCont {
+
+}
