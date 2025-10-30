@@ -19,9 +19,9 @@ html, body {
 /*THE MAIN MAIN BOX CONFIG */
 .mainMainBox {
     height: 100vh;
-    background-color: rgb(230, 214, 171);
+    background-color: rgb(214, 200, 161);
     display: grid;
-    grid-template-rows: 125px 1fr 1fr 80px;
+    grid-template-rows: 100px 1fr 1fr 40px;
     grid-template-columns: minmax(300px, 0.8fr) minmax(500px, 2fr);
 
 }
@@ -75,8 +75,8 @@ html, body {
 
 
 .libraryLogoHead {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     filter: invert();
 }
 
@@ -87,7 +87,35 @@ html, body {
 .sideCont {
     grid-row: 2 / span 2;
     grid-column: 1;
+    display: grid;
+    color: white;
+    justify-items: center;
+    align-items: center;
+
 }
+
+.startSection {
+    height: 550px;
+    width: 250px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.startBTN, .removeBTN {
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 20px;
+    background-color:rgb(222, 211, 182);
+    color:rgb(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+
 
 
 
