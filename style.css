@@ -22,7 +22,7 @@ html, body {
     background-color: rgb(214, 200, 161);
     display: grid;
     grid-template-rows: 100px 1fr 1fr 40px;
-    grid-template-columns: minmax(300px, 0.8fr) minmax(500px, 2fr);
+    grid-template-columns: minmax(300px, 0.5fr) minmax(500px, 2fr);
 
 }
 
