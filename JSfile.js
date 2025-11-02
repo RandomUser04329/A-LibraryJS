@@ -25,25 +25,34 @@ let shelfFour = document.querySelector(".shelf4");
 let shelfFive = document.querySelector(".shelf5");
 
 //Button Selectors
-const makeBTN = document.querySelector(".startBTN");
+const startBTN = document.querySelector(".startBTN");
 const removeBTN = document.querySelector(".removeBTN");
 
 //The pages for book creation
+let startPage;
 let inputPage; 
 let colorPage; 
 
-makeBTN.addEventListener("click", bookMake(true));
+//boolean to remove/show a page
+let remove;
+
+startBTN.addEventListener("click", function() {
+    remove = true;
+    bookMake(remove);
+});
 
 function bookMake(removePage) {
 
     //The pages for book creation
-    let inputPage; 
-    let colorPage; 
+    inputPage = document.createElement("div");
+    colorPage = document.createElement("div"); 
   
-    if (removePage == true) {
-        let startPage = document.querySelector(".startSect");
+    startPage = document.querySelector(".startSect");
 
-        sideContentPage.classList.remove(startPage);
+    if (removePage === true) {
+        sideContentPage.remove(startPage);
+    } 
+    
 
-    }
+
 }
