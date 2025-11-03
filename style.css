@@ -136,6 +136,58 @@ html, body {
 }
 
 
+/*INPUT PAGE*/
+
+.inputSection {
+    height: 400px;
+    width: 270px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/*COLOR PAGE*/
+
+.colorSection {
+    height: 400px;
+    width: 270px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/*SHELF SELECTION*/
+
+
+.shelfChoiceSection {
+    height: 400px;
+    width: 270px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+    justify-items: center;
+    align-items: center;
+}
+
+
 
 
 

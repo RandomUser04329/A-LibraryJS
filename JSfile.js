@@ -29,30 +29,33 @@ const startBTN = document.querySelector(".startBTN");
 const removeBTN = document.querySelector(".removeBTN");
 
 //The pages for book creation
-let startPage;
-let inputPage; 
-let colorPage; 
+const inputPage = document.createElement("div");
+inputPage.setAttribute("class", "inputSection")
 
-//boolean to remove/show a page
-let remove;
+let startPage = document.querySelector(".startSection");
+let inputSect = document.querySelector(".inputSection")
+let colorPage = document.createElement("div");
+
+
+//boolean to hide/show a page
+let showPage;
 
 startBTN.addEventListener("click", function() {
-    remove = true;
-    bookMake(remove);
+    showPage = true;
+    startPageFunc(showPage);
 });
 
-function bookMake(removePage) {
-
-    //The pages for book creation
-    inputPage = document.createElement("div");
-    colorPage = document.createElement("div"); 
-  
-    startPage = document.querySelector(".startSect");
-
-    if (removePage === true) {
-        sideContentPage.remove(startPage);
+function startPageFunc(showPage) {
+    if (showPage === true) {
+        startPage.style.display = "none";
+        inputPageFunc(showPage);
     } 
     
+}
 
-
+function inputPageFunc(showPage) {
+    if (showPage === true) {
+        inputSect.style.display = "grid";
+        sideContentPage.appendChild(inputPage);
+    } 
 }
