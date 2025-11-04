@@ -28,12 +28,10 @@ let shelfFive = document.querySelector(".shelf5");
 const startBTN = document.querySelector(".startBTN");
 const removeBTN = document.querySelector(".removeBTN");
 
-//The pages for book creation
-const inputPage = document.createElement("div");
-inputPage.setAttribute("class", "inputSection")
+//The page for input Selection on book
+let inputSect = document.querySelector(".inputSection");
 
 let startPage = document.querySelector(".startSection");
-let inputSect = document.querySelector(".inputSection")
 let colorPage = document.createElement("div");
 
 
@@ -48,14 +46,20 @@ startBTN.addEventListener("click", function() {
 function startPageFunc(showPage) {
     if (showPage === true) {
         startPage.style.display = "none";
-        inputPageFunc(showPage);
-    } 
-    
+    } else if (showPage === false) {
+        startPage.style.display = "grid";
+    }
+    return inputPageFunc(showPage);
 }
 
 function inputPageFunc(showPage) {
     if (showPage === true) {
         inputSect.style.display = "grid";
-        sideContentPage.appendChild(inputPage);
-    } 
+    } else if (showPage === false) {
+        inputSect.style.display = "none";
+    }
+}
+
+function colorPageFunc(showPage) {
+    
 }
