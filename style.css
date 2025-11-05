@@ -102,7 +102,7 @@ html, body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    display: grid;
+    display: none;
     justify-items: center;
     align-items: center;
 }
@@ -143,8 +143,16 @@ html, body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    display: none;
+    display: grid;
     justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+form {
+    width: 250px;
+    display: grid;
+    justify-content: center;
     align-items: center;
 }
 
