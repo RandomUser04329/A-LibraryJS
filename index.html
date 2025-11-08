@@ -34,21 +34,31 @@
                 <button class = "removeBTN">Go!</button>
             </div>
 
+            <div class = "removeSection"> 
+                <h1 class = "trueHeader">Choose a book you wish to remove.</h1>
+                <p class = "trueParagraph">click any of the books to reveal its 
+                    info and if you wish to remove it!</p>
+
+                <h1 class = "falseHeader">You have no books stored yet.</h1>
+                <button class = "addButton" event = "click">Add a Book!</button>
+            </div>
+
+
             <div class = "inputSection">
 
                 <h1 class = "inputHeader">Make your book!</h1>
                 <form class = "inputInfo"> 
                     <label for = "bookTitle" class = "formLabel">Enter the Title:</label>
-                    <input type = "text" class = "bookTitleInput" name = "bookTitleInput">
+                    <input type = "text" class = "bookTitleInput" name = "bookTitleInput" required>
 
                     <label for = "authorName" class = "formLabel">Enter the Author's Name:</label>
-                    <input type = "text" class = "authorNameInput" name = "authorNameInput">
+                    <input type = "text" class = "authorNameInput" name = "authorNameInput" required>
 
                     <label for = "pageCount" class = "formLabel">Enter Page Count:</label>
-                    <input type = "text" class = "pageCountInput" name = "pageCountInput">
+                    <input type = "text" class = "pageCountInput" name = "pageCountInput" required>
 
                     <label for = "colorChoice" class = "formLabel">Choose a Color:</label>
-                    <input type = "color" class = "bookColorInput" name = "bookColorInput">
+                    <input type = "color" class = "bookColorInput" name = "bookColorInput" required>
                 </form>
 
                 <button class = "submitButton" event = "click">Submit</button>
@@ -65,6 +75,12 @@
                     <button class = "shelf4Button" event = "onclick">Shelf 4</button>
                     <button class = "shelf5Button" event = "onclick">Shelf 5</button>
                 </div>
+            </div>
+
+            <div class = "confirmedSect">
+                <h1 class = "doneTitle">Done!</h1>
+
+                <button class = "backButton">Back to Start.</button>
             </div>
         
         </div>

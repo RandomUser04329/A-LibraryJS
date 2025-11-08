@@ -112,21 +112,21 @@ html, body {
 .startBTN, .removeBTN {
     width: 200px;
     height: 50px;
+    border-radius: 10px;
     border: 0;
-    border-radius: 20px;
-    background-color:rgb(222, 211, 182);
-    color:rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 
 .startBTN:hover, .removeBTN:hover {
-    background-color:rgb(222, 211, 182, 0.8);
-    color:rgb(255, 255, 255, 0.4);
+    background-color: rgb(250, 250, 250);
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .startBTN:active, .removeBTN:active {
-    background-color:rgb(222, 211, 182, 0.6);
-    color:rgb(255, 255, 255, 0.2);
+    background-color: rgb(250, 250, 250, 0.8);
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .startHead, .removeHead {
@@ -135,6 +135,55 @@ html, body {
     width: 250px;
 }
 
+/*REMOVE PAGE*/
+.removeSection {
+    height: 400px;
+    width: 270px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+/*REMOVE PAGE (IF NO BOOKS ARE PRESENT)*/
+.falseHeader {
+    margin: 0;
+    font-size: 26px;
+    text-align: center;
+}
+
+.addButton {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border: 0;
+}
+
+.falseHeader, .addButton {
+    display: none;
+}
+
+/*REMOVE PAGE (IF BOOKS ARE PRESENT)*/
+.trueHeader {
+    margin: 0;
+    font-size: 26px;
+    text-align: center;
+}
+
+.trueParagraph {
+    font-size: 13px;
+    width: 200px;
+}
+
+.trueHeader, .trueParagraph {
+    display: none;
+}
 
 /*INPUT PAGE*/
 
@@ -208,7 +257,7 @@ html, body {
     height: 550px;
     width: 270px;
     font-weight: bold;
-    display: grid;
+    display: none;
     grid-template-rows: 150px 300px;
     justify-items: center;
     align-items: center;
@@ -252,6 +301,39 @@ html, body {
     background-color: rgb(250, 250, 250, 0.8);
     color: rgba(0, 0, 0, 0.2);
 }
+
+
+.confirmedSect {
+    height: 550px;
+    width: 270px;
+    font-weight: bold;
+    font-size: 32px;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.backButton {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0);
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.backButton:active {
+    background-color: rgb(250, 250, 250, 0.8);
+    color: rgba(0, 0, 0, 0.2);
+}
+
 
 
 
