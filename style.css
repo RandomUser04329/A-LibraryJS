@@ -103,7 +103,7 @@ html, body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    display: none;
+    display: grid;
     justify-items: center;
     align-items: center;
 }
@@ -142,7 +142,7 @@ html, body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    display: grid;
+    display: none;
     justify-items: center;
     align-content: center;
     align-items: center;

@@ -52,14 +52,23 @@ function startPageFunc(showPage) {
     return inputPageFunc(showPage);
 }
 
+let bookName;
+let bookAuthor;
+let bookPages;
+let bookColor;
+
 function inputPageFunc(showPage) {
     if (showPage === true) {
         inputSect.style.display = "grid";
     } else if (showPage === false) {
         inputSect.style.display = "none";
     }
-}
 
-function colorPageFunc(showPage) {
+    bookName = document.querySelector(".bookTitleInput");
+    bookAuthor = document.querySelector(".authorNameInput");
+    bookPages = document.querySelector(".pageCountInput");
+    bookColor = document.querySelector(".bookColorInput");
     
+    
+
 }
