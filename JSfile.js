@@ -50,10 +50,17 @@ const userLibrary = [];
 
 
 //Book Info Variable Declarations 
+let bookSelector;
+let authorSelector;
+let pagesSelector;
+let colorSelector;
+
 let bookName;
 let bookAuthor;
 let bookPages;
 let bookColor;
+
+let book; 
 
 
 //Submit button Declarations
@@ -69,38 +76,36 @@ function inputPageFunc(showPage) {
         inputSect.style.display = "none";
     }
 
-    bookName = document.querySelector(".bookTitleInput");
-    bookAuthor = document.querySelector(".authorNameInput");
-    bookPages = document.querySelector(".pageCountInput");
-    bookColor = document.querySelector(".bookColorInput");
+    bookSelector = document.querySelector(".bookTitleInput");
+    authorSelector = document.querySelector(".authorNameInput");
+    pagesSelector = document.querySelector(".pageCountInput");
+    colorSelector = document.querySelector(".bookColorInput");
 
     submitButton = document.querySelector(".submitButton");
 
-    let name = bookName.value;
-    let author = bookAuthor.value;
-    let pages = bookPages.value;
-    let color = bookColor.value;
-
-    let book; 
-
     
-    submitButton.addEventListener("click", handleClick);
-
-    function handleClick() { 
-        if (name === "" || author === "" || pages === "" ) {
+    submitButton.addEventListener("click", function() {
+        bookName = bookSelector.value;
+        bookAuthor = authorSelector.value;
+        bookPages = pagesSelector.value;
+        bookColor = colorSelector.value;
+        if (bookName === "" || bookAuthor === "" || bookPages === "") {
             alert("All Fields are Required.");
         } else {
             for (i = 0; i < bookLimit; ++i) {
-                book = new Book(name, author, pages, color);
+                book = new Book(bookName, bookAuthor, bookPages, bookColor);
                 userLibrary[i] = book;
-                break;
+                showPage = true;
+                return shelfSelection(book, showPage);
             }
         }
-    }
+    });
+
+   
 
 }
 
-console.log(userLibrary);
+//console.log(userLibrary);
 
 //Makes the Book
 function Book(bookName, authorsName, pageCount, colorBook) {
@@ -109,6 +114,25 @@ function Book(bookName, authorsName, pageCount, colorBook) {
     this.bookPages = pageCount;
     this.bookColor = colorBook;
 }
+
+
+
+//Shelf Declarations 
+let libraryPage = document.querySelector(".libraryCont");
+let shelfDOMSelector = document.querySelector(".bookShelf");
+let shelfChoicePageSelector = document.querySelector(".shelfChoiceSelection");
+
+
+function shelfSelection (usersBook, showPage) {
+    if (showPage === true) {
+        inputSect.style.display = "none";
+        shelfChoicePageSelector.style.display = "grid";
+    } else if (showPage === false) {
+        shelfChoicePageSelector.style.display = "none";
+    }
+    console.log(userLibrary);
+}
+
 
 
 
