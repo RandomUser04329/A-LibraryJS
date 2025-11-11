@@ -1,11 +1,3 @@
-//Makes the Book
-function Book() {
-
-}
-
-//Users Library
-const userLibrary = []; 
-
 
 //The Users library
 function bookLibrary() { 
@@ -52,10 +44,23 @@ function startPageFunc(showPage) {
     return inputPageFunc(showPage);
 }
 
+
+//Users Library
+const userLibrary = []; 
+
+
+//Book Info Variable Declarations 
 let bookName;
 let bookAuthor;
 let bookPages;
 let bookColor;
+
+
+//Submit button Declarations
+let submitButton;
+
+let i;
+let bookLimit = 30;
 
 function inputPageFunc(showPage) {
     if (showPage === true) {
@@ -68,7 +73,44 @@ function inputPageFunc(showPage) {
     bookAuthor = document.querySelector(".authorNameInput");
     bookPages = document.querySelector(".pageCountInput");
     bookColor = document.querySelector(".bookColorInput");
+
+    submitButton = document.querySelector(".submitButton");
+
+    let name = bookName.value;
+    let author = bookAuthor.value;
+    let pages = bookPages.value;
+    let color = bookColor.value;
+
+    let book; 
+
     
-    
+    submitButton.addEventListener("click", handleClick);
+
+    function handleClick() { 
+        if (name === "" || author === "" || pages === "" ) {
+            alert("All Fields are Required.");
+        } else {
+            for (i = 0; i < bookLimit; ++i) {
+                book = new Book(name, author, pages, color);
+                userLibrary[i] = book;
+                break;
+            }
+        }
+    }
 
 }
+
+console.log(userLibrary);
+
+//Makes the Book
+function Book(bookName, authorsName, pageCount, colorBook) {
+    this.bookName = bookName;
+    this.bookAuthor = authorsName;
+    this.bookPages = pageCount;
+    this.bookColor = colorBook;
+}
+
+
+
+
+
