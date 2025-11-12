@@ -96,6 +96,7 @@ function inputPageFunc(showPage) {
                 book = new Book(bookName, bookAuthor, bookPages, bookColor);
                 userLibrary[i] = book;
                 showPage = true;
+                //console.log(userLibrary[i]);
                 return shelfSelection(book, showPage);
             }
         }
@@ -120,7 +121,19 @@ function Book(bookName, authorsName, pageCount, colorBook) {
 //Shelf Declarations 
 let libraryPage = document.querySelector(".libraryCont");
 let shelfDOMSelector = document.querySelector(".bookShelf");
-let shelfChoicePageSelector = document.querySelector(".shelfChoiceSelection");
+let shelfChoicePageSelector = document.querySelector(".shelfChoiceSection");
+
+let shelf1 = document.querySelector(".shelf1");
+let shelf2 = document.querySelector(".shelf2");
+let shelf3 = document.querySelector(".shelf3");
+let shelf4 = document.querySelector(".shelf4");
+let shelf5 = document.querySelector(".shelf5");
+
+let shelf1Button = document.querySelector(".shelf1Button");
+let shelf2Button = document.querySelector(".shelf2Button");
+let shelf3Button = document.querySelector(".shelf3Button");
+let shelf4Button = document.querySelector(".shelf4Button");
+let shelf5Button = document.querySelector(".shelf5Button");
 
 
 function shelfSelection (usersBook, showPage) {
@@ -131,6 +144,29 @@ function shelfSelection (usersBook, showPage) {
         shelfChoicePageSelector.style.display = "none";
     }
     console.log(userLibrary);
+
+    shelf1Button.addEventListener("click", function() {
+        
+    });
+
+    shelf2Button.addEventListener("click", function() {
+
+    });
+
+    shelf3Button.addEventListener("click", function() {
+
+    });
+
+    shelf4Button.addEventListener("click", function() {
+
+    });
+
+    shelf5Button.addEventListener("click", function() {
+
+    });
+
+
+
 }
 
 

@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid red;
+}
+
 
 @font-face { 
     font-family: customFont1;
@@ -351,6 +355,13 @@ html, body {
 }
 
 
+/*BOOK CHOICE SELECTION STYLES */
+
+.bookChoiceSelection {
+    display: none;
+}
+
+
 
 
 
@@ -381,6 +392,23 @@ html, body {
     width: auto;
     height: 110px;
     border-bottom: 10px solid rgb(165, 112, 42);
+}
+
+
+.shelf1 {
+    display: grid;
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: 1fr;
+    gap: 7px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.book1, .book2, .book3, .book4, .book5 {
+    width: 30px;
+    height: 90px;
+    margin-top: 16px;
 }
 
 
