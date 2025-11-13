@@ -116,6 +116,11 @@ function Book(bookName, authorsName, pageCount, colorBook) {
     this.bookColor = colorBook;
 }
 
+//Makes the shelve into an Object that hold books (Object within an Object)
+function Shelf1(userBook) {
+    this.book = userBook;
+}
+
 
 
 //Shelf Declarations 
@@ -124,6 +129,7 @@ let shelfDOMSelector = document.querySelector(".bookShelf");
 let shelfChoicePageSelector = document.querySelector(".shelfChoiceSection");
 
 let shelf1 = document.querySelector(".shelf1");
+/*
 let shelf2 = document.querySelector(".shelf2");
 let shelf3 = document.querySelector(".shelf3");
 let shelf4 = document.querySelector(".shelf4");
@@ -134,9 +140,9 @@ let shelf2Button = document.querySelector(".shelf2Button");
 let shelf3Button = document.querySelector(".shelf3Button");
 let shelf4Button = document.querySelector(".shelf4Button");
 let shelf5Button = document.querySelector(".shelf5Button");
+*/
 
-
-function shelfSelection (usersBook, showPage) {
+function shelfSelection(usersBook, showPage) {
     if (showPage === true) {
         inputSect.style.display = "none";
         shelfChoicePageSelector.style.display = "grid";
@@ -147,25 +153,12 @@ function shelfSelection (usersBook, showPage) {
 
     shelf1Button.addEventListener("click", function() {
         
+        
     });
 
-    shelf2Button.addEventListener("click", function() {
+}
 
-    });
-
-    shelf3Button.addEventListener("click", function() {
-
-    });
-
-    shelf4Button.addEventListener("click", function() {
-
-    });
-
-    shelf5Button.addEventListener("click", function() {
-
-    });
-
-
+function bookSelection(usersBook, showPage) {
 
 }
 
