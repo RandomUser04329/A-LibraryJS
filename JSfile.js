@@ -1,12 +1,10 @@
 
-//The Users library
-function bookLibrary() { 
-
-}
-
 //Page Selectors
 const sideContentPage = document.querySelector(".sideCont");
 const libraryContentPage = document.querySelector(".LibraryCont");
+
+//Users Library
+const userLibrary = [];
 
 
 //Shelf Selectors
@@ -43,10 +41,6 @@ function startPageFunc(showPage) {
     }
     return inputPageFunc(showPage);
 }
-
-
-//Users Library
-const userLibrary = []; 
 
 
 //Book Info Variable Declarations 
@@ -106,7 +100,6 @@ function inputPageFunc(showPage) {
 
 }
 
-//console.log(userLibrary);
 
 //Makes the Book
 function Book(bookName, authorsName, pageCount, colorBook) {
@@ -116,9 +109,22 @@ function Book(bookName, authorsName, pageCount, colorBook) {
     this.bookColor = colorBook;
 }
 
+const shelf1Arr = [5];
+const bookArr = [5];
+
+
 //Makes the shelve into an Object that hold books (Object within an Object)
-function Shelf1(userBook) {
+function Shelf(userBook, shelfPos, bookPos) {
     this.book = userBook;
+    for (i = 0; i < shelf1Arr.length; i++) {
+        if (i === shelfPos) {
+            if (i === bookPos) {
+                shelf1Arr[i] = book;
+                bookArr[i] = book; 
+                return confirmedPageFunc();
+            }
+        }
+    }
 }
 
 
@@ -129,18 +135,10 @@ let shelfDOMSelector = document.querySelector(".bookShelf");
 let shelfChoicePageSelector = document.querySelector(".shelfChoiceSection");
 
 let shelf1 = document.querySelector(".shelf1");
-/*
-let shelf2 = document.querySelector(".shelf2");
-let shelf3 = document.querySelector(".shelf3");
-let shelf4 = document.querySelector(".shelf4");
-let shelf5 = document.querySelector(".shelf5");
 
-let shelf1Button = document.querySelector(".shelf1Button");
-let shelf2Button = document.querySelector(".shelf2Button");
-let shelf3Button = document.querySelector(".shelf3Button");
-let shelf4Button = document.querySelector(".shelf4Button");
-let shelf5Button = document.querySelector(".shelf5Button");
-*/
+let shelfPos = 0;
+let bookPos = 0;
+
 
 function shelfSelection(usersBook, showPage) {
     if (showPage === true) {
@@ -152,14 +150,44 @@ function shelfSelection(usersBook, showPage) {
     console.log(userLibrary);
 
     shelf1Button.addEventListener("click", function() {
-        
-        
+        shelfPos = 1;
+        showPage = true;
+        bookSelection(usersBook, showPage, shelfPos)
     });
 
 }
 
-function bookSelection(usersBook, showPage) {
+function bookSelection(usersBook, showPage, shelfPos) {
+    if (showPage === true) {
+        shelfChoicePageSelector.style.display = "none";
+        bookChoiceSelection.style.display = "grid";
+    } else if (showPage === false) {
+        bookChoiceSelection.style.display = "none";
+    }
 
+    book1Button.addEventListener("Click", function() {
+        bookPos = 1;
+        Shelf(usersBook, shelfPos, bookPos); 
+    });
+}
+
+
+
+
+let confirmedPage = document.querySelector(".confirmedSect");
+let backtoMain = document.querySelector(".backButton");
+
+
+function confirmedPageFunc() {
+    confirmedPage.style.display = "grid"
+    bookChoiceSelection.style.display = "none";
+
+
+    backtoMain.addEventListener("click", function() {
+        showPage = true;
+        confirmedPage.style.display = "none";
+        return startPageFunc(showPage);
+    })
 }
 
 
