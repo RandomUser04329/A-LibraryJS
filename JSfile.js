@@ -113,18 +113,10 @@ const shelf1Arr = [5];
 const bookArr = [5];
 
 
-//Makes the shelve into an Object that hold books (Object within an Object)
+//Makes the shelve into an Object that hold books 
 function Shelf(userBook, shelfPos, bookPos) {
     this.book = userBook;
-    for (i = 0; i < shelf1Arr.length; i++) {
-        if (i === shelfPos) {
-            if (i === bookPos) {
-                shelf1Arr[i] = book;
-                bookArr[i] = book; 
-                return confirmedPageFunc();
-            }
-        }
-    }
+    
 }
 
 
@@ -135,6 +127,7 @@ let shelfDOMSelector = document.querySelector(".bookShelf");
 let shelfChoicePageSelector = document.querySelector(".shelfChoiceSection");
 
 let shelf1 = document.querySelector(".shelf1");
+let shelf1Button = document.querySelector(".shelf1Button");
 
 let shelfPos = 0;
 let bookPos = 0;
@@ -152,17 +145,21 @@ function shelfSelection(usersBook, showPage) {
     shelf1Button.addEventListener("click", function() {
         shelfPos = 1;
         showPage = true;
-        bookSelection(usersBook, showPage, shelfPos)
+        return bookSelection(usersBook, showPage, shelfPos)
     });
 
 }
 
+//Book choice selectors
+let bookPage = document.querySelector(".bookChoiceSelection");
+
+
 function bookSelection(usersBook, showPage, shelfPos) {
     if (showPage === true) {
         shelfChoicePageSelector.style.display = "none";
-        bookChoiceSelection.style.display = "grid";
+        bookPage.style.display = "grid";
     } else if (showPage === false) {
-        bookChoiceSelection.style.display = "none";
+        bookPage.style.display = "none";
     }
 
     book1Button.addEventListener("Click", function() {
@@ -173,7 +170,7 @@ function bookSelection(usersBook, showPage, shelfPos) {
 
 
 
-
+//Last page(confirmed/done page) selectors/
 let confirmedPage = document.querySelector(".confirmedSect");
 let backtoMain = document.querySelector(".backButton");
 

@@ -108,7 +108,7 @@ html, body {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    display: none;
+    display: grid;
     justify-items: center;
     align-items: center;
 }
@@ -279,7 +279,7 @@ html, body {
     width: 270px;
     font-weight: bold;
     display: none;
-    grid-template-rows: 150px 300px;
+    grid-template-rows: 90px 50px 300px;
     justify-items: center;
     align-items: center;
 }
@@ -287,6 +287,12 @@ html, body {
 .shelfHeader {
     margin: 0;
     font-size: 26px;
+    text-align: center;
+}
+
+.disclaimerHeader {
+    margin: 0;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -362,7 +368,7 @@ html, body {
     height: 550px;
     width: 300px;
     font-weight: bold;
-    display: grid;
+    display: none;
     grid-template-rows: 150px 300px;
     justify-items: center;
     align-items: center;
