@@ -77,7 +77,6 @@ function inputPageFunc(showPage) {
 
     submitButton = document.querySelector(".submitButton");
 
-    
     submitButton.addEventListener("click", function() {
         bookName = bookSelector.value;
         bookAuthor = authorSelector.value;
@@ -90,14 +89,10 @@ function inputPageFunc(showPage) {
                 book = new Book(bookName, bookAuthor, bookPages, bookColor);
                 userLibrary[i] = book;
                 showPage = true;
-                //console.log(userLibrary[i]);
                 return shelfSelection(book, showPage);
             }
         }
     });
-
-   
-
 }
 
 
@@ -109,14 +104,23 @@ function Book(bookName, authorsName, pageCount, colorBook) {
     this.bookColor = colorBook;
 }
 
-const shelf1Arr = [5];
-const bookArr = [5];
+const shelf1Arr = [];
+const bookArr = [];
 
 
-//Makes the shelve into an Object that hold books 
+//Makes the shelf hold arrays to allocate which shelf and which book position the book is stored at
 function Shelf(userBook, shelfPos, bookPos) {
-    this.book = userBook;
-    
+
+    for (i = 0; i < 5; i++) {
+        if (shelfPos === i) {
+            shelf1Arr[i] = bookArr;
+            if (i === bookPos) {
+                shelf1Arr[i] = bookArr;
+                bookArr[i] = userBook;
+                return confirmedPageFunc();
+            }
+        }
+    }
 }
 
 
@@ -140,7 +144,6 @@ function shelfSelection(usersBook, showPage) {
     } else if (showPage === false) {
         shelfChoicePageSelector.style.display = "none";
     }
-    console.log(userLibrary);
 
     shelf1Button.addEventListener("click", function() {
         shelfPos = 1;
@@ -152,7 +155,7 @@ function shelfSelection(usersBook, showPage) {
 
 //Book choice selectors
 let bookPage = document.querySelector(".bookChoiceSelection");
-
+let book1Button = document.querySelector(".book1Button");
 
 function bookSelection(usersBook, showPage, shelfPos) {
     if (showPage === true) {
@@ -162,9 +165,9 @@ function bookSelection(usersBook, showPage, shelfPos) {
         bookPage.style.display = "none";
     }
 
-    book1Button.addEventListener("Click", function() {
+    book1Button.addEventListener("click", function() {
         bookPos = 1;
-        Shelf(usersBook, shelfPos, bookPos); 
+        return Shelf(usersBook, shelfPos, bookPos); 
     });
 }
 
@@ -177,11 +180,12 @@ let backtoMain = document.querySelector(".backButton");
 
 function confirmedPageFunc() {
     confirmedPage.style.display = "grid"
-    bookChoiceSelection.style.display = "none";
+    bookPage.style.display = "none";
+    console.log(shelf1Arr);
 
 
     backtoMain.addEventListener("click", function() {
-        showPage = true;
+        showPage = false;
         confirmedPage.style.display = "none";
         return startPageFunc(showPage);
     })
