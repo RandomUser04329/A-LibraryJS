@@ -112,10 +112,9 @@ const bookArr = [];
 function Shelf(userBook, shelfPos, bookPos) {
 
     for (i = 0; i < 5; i++) {
-        if (shelfPos === i) {
+        if (i === shelfPos) {
             shelf1Arr[i] = bookArr;
             if (i === bookPos) {
-                shelf1Arr[i] = bookArr;
                 bookArr[i] = userBook;
                 return confirmedPageFunc();
             }
@@ -131,7 +130,16 @@ let shelfDOMSelector = document.querySelector(".bookShelf");
 let shelfChoicePageSelector = document.querySelector(".shelfChoiceSection");
 
 let shelf1 = document.querySelector(".shelf1");
+let shelf2 = document.querySelector(".shelf2");
+let shelf3 = document.querySelector(".shelf3");
+let shelf4 = document.querySelector(".shelf4");
+let shelf5 = document.querySelector(".shelf5");
+
 let shelf1Button = document.querySelector(".shelf1Button");
+let shelf2Button = document.querySelector(".shelf2Button");
+let shelf3Button = document.querySelector(".shelf3Button");
+let shelf4Button = document.querySelector(".shelf4Button");
+let shelf5Button = document.querySelector(".shelf5Button");
 
 let shelfPos = 0;
 let bookPos = 0;
@@ -144,6 +152,7 @@ function shelfSelection(usersBook, showPage) {
     } else if (showPage === false) {
         shelfChoicePageSelector.style.display = "none";
     }
+    
 
     shelf1Button.addEventListener("click", function() {
         shelfPos = 1;
@@ -151,11 +160,56 @@ function shelfSelection(usersBook, showPage) {
         return bookSelection(usersBook, showPage, shelfPos)
     });
 
+    shelf1Button.addEventListener("mouseenter", function() {
+        shelf1.classList.add("glow");
+    });
+    shelf1Button.addEventListener("mouseleave", function() {
+        shelf1.classList.remove("glow");
+    });
+
+    shelf2Button.addEventListener("mouseenter", function() {
+        shelf2.classList.add("glow");
+    });
+    shelf2Button.addEventListener("mouseleave", function() {
+        shelf2.classList.remove("glow");
+    });
+
+    shelf3Button.addEventListener("mouseenter", function() {
+        shelf3.classList.add("glow");
+    });
+    shelf3Button.addEventListener("mouseleave", function() {
+        shelf3.classList.remove("glow");
+    });
+
+    shelf4Button.addEventListener("mouseenter", function() {
+        shelf4.classList.add("glow");
+    });
+    shelf4Button.addEventListener("mouseleave", function() {
+        shelf4.classList.remove("glow");
+    });
+
+    shelf5Button.addEventListener("mouseenter", function() {
+        shelf5.classList.add("glow");
+    });
+    shelf5Button.addEventListener("mouseleave", function() {
+        shelf5.classList.remove("glow");
+    });
+
 }
 
 //Book choice selectors
 let bookPage = document.querySelector(".bookChoiceSelection");
+
+let book1 = document.querySelector(".book1");
+let book2 = document.querySelector(".book2");
+let book3 = document.querySelector(".book3");
+let book4 = document.querySelector(".book4");
+let book5 = document.querySelector(".book5");
 let book1Button = document.querySelector(".book1Button");
+let book2Button = document.querySelector(".book2Button");
+let book3Button = document.querySelector(".book3Button");
+let book4Button = document.querySelector(".book4Button");
+let book5Button = document.querySelector(".book5Button");
 
 function bookSelection(usersBook, showPage, shelfPos) {
     if (showPage === true) {
@@ -168,6 +222,43 @@ function bookSelection(usersBook, showPage, shelfPos) {
     book1Button.addEventListener("click", function() {
         bookPos = 1;
         return Shelf(usersBook, shelfPos, bookPos); 
+    });
+
+
+    book1Button.addEventListener("mouseenter", function() {
+        book1.classList.add("glow");
+    });
+
+    book1Button.addEventListener("mouseleave", function() {
+        book1.classList.remove("glow");
+    });
+
+    book2Button.addEventListener("mouseenter" , function() {
+        book2.classList.add("glow");
+    });
+    book2Button.addEventListener("mouseleave", function() {
+        book2.classList.remove("glow");
+    });
+
+    book3Button.addEventListener("mouseenter", function() {
+        book3.classList.add("glow");
+    });
+    book3Button.addEventListener("mouseleave", function() {
+        book3.classList.remove("glow");
+    });
+
+    book4Button.addEventListener("mouseenter", function() {
+        book4.classList.add("glow");
+    });
+    book4Button.addEventListener("mouseleave", function() {
+        book4.classList.remove("glow");
+    });
+
+    book5Button.addEventListener("mouseenter", function() {
+        book5.classList.add("glow");
+    });
+    book5Button.addEventListener("mouseleave", function() {
+        book5.classList.remove("glow");
     });
 }
 

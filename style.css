@@ -1,4 +1,4 @@
-* {
+  {
     outline: 1px solid red;
 }
 
@@ -462,8 +462,19 @@ html, body {
 
 
 
+/*SHELF HOVER STYLES (when cursor is hovering over button) */
+.shelf1.glow, .shelf2.glow, 
+.shelf3.glow, .shelf4.glow, .shelf5.glow {
+    box-shadow: 0 0 20px 2px rgba(255, 223, 134, 0.7);
+}
 
 
+/*BOOK HOVER STYLES (when cursor is hovering over button) */
+
+.book1.glow, .book2.glow, .book3.glow, 
+.book4.glow, .book5.glow {
+    box-shadow: 0 0 20px 2px rgba(255, 223, 134, 0.7);
+}
 
 
 
